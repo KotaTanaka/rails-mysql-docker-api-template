@@ -1,0 +1,11 @@
+# Rails
+src/.bundle
+src/vendor
+src/log
+src/tmp
+src/storage
+src/.byebug_history
+src/config/master.key
+
+# Docker
+docker/db/mysql_data
