@@ -1,1 +1,62 @@
 openapi: 3.0.0
+info:
+  title: Find Wi-Fi API
+  version: "0.01"
+  description: |-
+    # Introduction
+    Find Wi-Fi のAPI仕様書です。
+
+    <h2>API一覧</h2>
+    <table>
+      <thead>
+        <th>No.</th><th>Method</th><th>Path</th><th>API名称</th>
+      </thead>
+      <tbody>
+        <tr><td>001</td><td>GET</td><td>/hello</td><td>ヘルスチェック</td></tr>
+      </tbody>
+    </table>
+servers:
+  - url: http://localhost:1323
+    description: ローカル
+tags:
+  - name: Health
+    description: ヘルスチェック
+
+paths:
+  /hello:
+    get:
+      tags:
+        - Health
+      summary: ヘルスチェック
+      operationId: getHello
+      description: ヘルスチェック用エンドポイント
+      x-codeSamples:
+        - lang: Shell
+          label: cURL
+          source: |
+            curl 'http://localhost:8080/hello'
+      responses:
+        200:
+          description: 成功
+          content:
+            application/json:
+              schema:
+                description: ヘルスチェックレスポンス
+                type: object
+                required:
+                  - message
+                properties:
+                  message:
+                    $ref: "#/components/schemas/Message"
+        400:
+          description: パラメータ不正
+        500:
+          description: システムエラー
+
+components:
+  schemas:
+    Message:
+      description: メッセージ
+      type: string
+      format: 文字列
+      example: Hello.
