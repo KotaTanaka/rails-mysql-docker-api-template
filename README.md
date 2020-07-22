@@ -1,24 +1,45 @@
-# README
+# rails-mysql-docker-api-template
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Dependencies
 
-Things you may want to cover:
+* Ruby `2.7`
+* Ruby on Rails `6.0`
+* MySQL `5.7`
+* Docker / Docker Compose
+* Open API `3.0`
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+* Build
 
-* Configuration
+```bash
+$ docker-compose build
+```
 
-* Database creation
+* Start services - DB, Application
 
-* Database initialization
+```bash
+$ docker-compose up -d
+```
 
-* How to run the test suite
+* Start application
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+$ ./server.sh
+```
 
-* Deployment instructions
+*>> Listen on http://localhost:8080*
 
-* ...
+* Show API spec
+
+```bash
+$ ./redoc.sh
+```
+
+*>> Can see at http://localhost:8080/redoc.html*
+
+* Stop services
+
+```bash
+$ docker-compose down
+```
