@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # Root
+  root "application#index"
+
+  # No Handler Path
+  get "*path", controller: "application", action: "no_handler_found"
+  post "*path", controller: "application", action: "no_handler_found"
+  put "*path", controller: "application", action: "no_handler_found"
+  delete "*path", controller: "application", action: "no_handler_found"
 end

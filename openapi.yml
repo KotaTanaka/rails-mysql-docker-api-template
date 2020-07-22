@@ -12,7 +12,7 @@ info:
         <th>No.</th><th>Method</th><th>Path</th><th>API名称</th>
       </thead>
       <tbody>
-        <tr><td>001</td><td>GET</td><td>/hello</td><td>ヘルスチェック</td></tr>
+        <tr><td>001</td><td>GET</td><td>/</td><td>ヘルスチェック</td></tr>
       </tbody>
     </table>
 servers:
@@ -34,7 +34,7 @@ paths:
         - lang: Shell
           label: cURL
           source: |
-            curl 'http://localhost:8080/hello'
+            curl 'http://localhost:8080'
       responses:
         200:
           description: 成功
