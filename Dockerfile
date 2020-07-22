@@ -16,5 +16,5 @@ ADD ./src/Gemfile.lock $APP_ROOT/Gemfile.lock
 RUN gem install bundler
 RUN bundle install
 
-# ADD ./src $APP_ROOT
-# ADD ./openapi.yml /docs/openapi.yml
+ADD ./src $APP_ROOT
+ADD ./openapi.yml /docs/openapi.yml

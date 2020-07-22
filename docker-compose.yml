@@ -12,7 +12,7 @@ services:
       - 8080:3000
     volumes:
       - ./src:/app
-      # - ./openapi.yml:/docs/openapi.yml
+      - ./openapi.yml:/docs/openapi.yml
     depends_on:
       - mysql
     environment:
