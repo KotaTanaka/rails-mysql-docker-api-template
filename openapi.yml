@@ -1,10 +1,10 @@
 openapi: 3.0.0
 info:
-  title: Find Wi-Fi API
+  title: Rails MySQL Docker API Template
   version: "0.01"
   description: |-
     # Introduction
-    Find Wi-Fi のAPI仕様書です。
+    API定義書
 
     <h2>API一覧</h2>
     <table>
@@ -16,7 +16,7 @@ info:
       </tbody>
     </table>
 servers:
-  - url: http://localhost:1323
+  - url: http://localhost:8080
     description: ローカル
 tags:
   - name: Health
