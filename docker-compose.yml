@@ -9,7 +9,7 @@ services:
     tty: true
     container_name: rails-api-template-app
     ports:
-      - 8080:3000
+      - 8080:8080
     volumes:
       - ./src:/app
       - ./openapi.yml:/docs/openapi.yml
