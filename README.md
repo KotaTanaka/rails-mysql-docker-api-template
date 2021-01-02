@@ -1,4 +1,8 @@
-# rails-mysql-docker-api-template
+***rails-api-sandbox***
+
+## About
+
+Ruby on Rails + MySQL + Docker での REST API 開発（View なし）の実験場
 
 ## Dependencies
 
